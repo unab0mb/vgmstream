@@ -1,25 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvgmstream", "src\libvgmstream.vcproj", "{54A6AD11-5369-4895-A06F-E255ABB99B11}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvgmstream", "src\libvgmstream.vcxproj", "{54A6AD11-5369-4895-A06F-E255ABB99B11}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "in_vgmstream", "winamp\in_vgmstream.vcproj", "{42D86561-8CE4-40F5-86CE-58C986B77502}"
-	ProjectSection(ProjectDependencies) = postProject
-		{54A6AD11-5369-4895-A06F-E255ABB99B11} = {54A6AD11-5369-4895-A06F-E255ABB99B11}
-		{10E6BFC6-1E5B-46E4-BA42-F04DFBD0ABFF} = {10E6BFC6-1E5B-46E4-BA42-F04DFBD0ABFF}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ext_libs", "ext_libs\ext_libs.vcxproj", "{10E6BFC6-1E5B-46E4-BA42-F04DFBD0ABFF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ext_libs", "ext_libs\ext_libs.vcproj", "{10E6BFC6-1E5B-46E4-BA42-F04DFBD0ABFF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vgmstream_cli", "cli\vgmstream_cli.vcxproj", "{AF7D88A0-3CB1-4CD8-BAD1-0305EB996D69}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vgmstream_cli", "cli\vgmstream_cli.vcproj", "{AF7D88A0-3CB1-4CD8-BAD1-0305EB996D69}"
-	ProjectSection(ProjectDependencies) = postProject
-		{54A6AD11-5369-4895-A06F-E255ABB99B11} = {54A6AD11-5369-4895-A06F-E255ABB99B11}
-		{42D86561-8CE4-40F5-86CE-58C986B77502} = {42D86561-8CE4-40F5-86CE-58C986B77502}
-		{330B53AE-4FAE-46DA-8785-9016DB4E3E23} = {330B53AE-4FAE-46DA-8785-9016DB4E3E23}
-		{10E6BFC6-1E5B-46E4-BA42-F04DFBD0ABFF} = {10E6BFC6-1E5B-46E4-BA42-F04DFBD0ABFF}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "getopt", "ext_libs\Getopt\getopt.vcproj", "{330B53AE-4FAE-46DA-8785-9016DB4E3E23}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "getopt", "ext_libs\Getopt\getopt.vcxproj", "{330B53AE-4FAE-46DA-8785-9016DB4E3E23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +21,6 @@ Global
 		{54A6AD11-5369-4895-A06F-E255ABB99B11}.Debug|Win32.Build.0 = Debug|Win32
 		{54A6AD11-5369-4895-A06F-E255ABB99B11}.Release|Win32.ActiveCfg = Release|Win32
 		{54A6AD11-5369-4895-A06F-E255ABB99B11}.Release|Win32.Build.0 = Release|Win32
-		{42D86561-8CE4-40F5-86CE-58C986B77502}.Debug|Win32.ActiveCfg = Debug|Win32
-		{42D86561-8CE4-40F5-86CE-58C986B77502}.Debug|Win32.Build.0 = Debug|Win32
-		{42D86561-8CE4-40F5-86CE-58C986B77502}.Release|Win32.ActiveCfg = Release|Win32
-		{42D86561-8CE4-40F5-86CE-58C986B77502}.Release|Win32.Build.0 = Release|Win32
 		{10E6BFC6-1E5B-46E4-BA42-F04DFBD0ABFF}.Debug|Win32.ActiveCfg = Debug|Win32
 		{10E6BFC6-1E5B-46E4-BA42-F04DFBD0ABFF}.Debug|Win32.Build.0 = Debug|Win32
 		{10E6BFC6-1E5B-46E4-BA42-F04DFBD0ABFF}.Release|Win32.ActiveCfg = Release|Win32
@@ -50,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9B7BFC6-D493-4158-8FC9-41BF15D8F35B}
 	EndGlobalSection
 EndGlobal
