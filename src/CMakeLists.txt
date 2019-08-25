@@ -25,7 +25,7 @@ source_group("Source Files\\layout" FILES ${LAYOUT_SOURCES})
 source_group("Source Files\\meta" FILES ${META_SOURCES})
 source_group("Source Files\\ext" FILES ${EXT_SOURCES})
 
-add_library(libvgmstream STATIC
+add_library(vgmstream STATIC
 	${CODING_HEADERS}
 	${CODING_SOURCES}
 	${LAYOUT_HEADERS}
@@ -37,11 +37,27 @@ add_library(libvgmstream STATIC
 	${MAIN_HEADERS}
 	${MAIN_SOURCES})
 
-setup_target(libvgmstream)
+setup_target(vgmstream)
 
 # Set up the proper include directories
-target_include_directories(libvgmstream PRIVATE
+target_include_directories(vgmstream PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}
 	coding
 	layout
 	meta)
+
+# Install library
+install(TARGETS vgmstream
+	ARCHIVE DESTINATION "${INSTALL_LIB_DIR}"
+	LIBRARY DESTINATION "${INSTALL_LIB_DIR}"
+)
+
+# Install headers
+install( FILES ${CMAKE_CURRENT_SOURCE_DIR}/vgmstream.h DESTINATION include/libvgmstream )
+install( FILES ${CMAKE_CURRENT_SOURCE_DIR}/util.h DESTINATION include/libvgmstream )
+install( FILES ${CMAKE_CURRENT_SOURCE_DIR}/util.h DESTINATION include/libvgmstream )
+install( FILES ${CMAKE_CURRENT_SOURCE_DIR}/streamtypes.h DESTINATION include/libvgmstream )
+install( FILES ${CMAKE_CURRENT_SOURCE_DIR}/streamfile.h DESTINATION include/libvgmstream )
+install( FILES ${CMAKE_CURRENT_SOURCE_DIR}/../ext_includes/clHCA.h DESTINATION include/libvgmstream )
+install( FILES ${CMAKE_CURRENT_SOURCE_DIR}/coding/g72x_state.h DESTINATION include/libvgmstream/coding )
+install( FILES ${CMAKE_CURRENT_SOURCE_DIR}/coding/nwa_decoder.h DESTINATION include/libvgmstream/coding )

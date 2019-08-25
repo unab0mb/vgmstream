@@ -6,9 +6,9 @@ enable_language(CXX)
 # TODO: Figure out how to build XMPlay plugin via CMake
 # TODO: Figure out why MinGW-w64 doesn't build
 
-if(MINGW)
-	message(FATAL_ERROR "Cannot currently build with MinGW")
-endif()
+# if(MINGW)
+# 	message(FATAL_ERROR "Cannot currently build with MinGW")
+# endif()
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 include(vgmstream)
